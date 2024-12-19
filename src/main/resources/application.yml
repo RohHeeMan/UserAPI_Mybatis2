@@ -1,0 +1,18 @@
+# server port
+server:
+  port: 8080
+
+# database
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: user_codingrecipe
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  # mapper의 위치를 설정함 ( mybatis-config와 충돌 나므로 한곳에만 설정함 )
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.users.users.dto
+  configuration:
+    map-underscore-to-camel-case: true

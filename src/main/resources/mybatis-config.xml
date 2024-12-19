@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+<!-- userMapper의 type에 대한 alias 아니면 com.users.users.dto.UserDTO 길게 써야 됨 -->
+    <typeAliases>
+        <typeAlias alias="userDTO" type="com.users.users.dto.UserDTO" />
+    </typeAliases>
+<!-- application.yml 에 mapper설정을 하므로 여기에는 사용할 필요가 없음. 동시에 쓰면 오류 발생함 -->
+<!--    <mappers>-->
+<!--        <mapper resource="mapper/UserMapper.xml"/>-->
+<!--    </mappers>-->
+</configuration>
